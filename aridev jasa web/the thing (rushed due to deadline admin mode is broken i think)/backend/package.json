@@ -1,0 +1,15 @@
+{
+  "name": "website-paket-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend untuk website paket pembuatan website: admin mengedit harga dan email notifikasi",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "hash-password": "node scripts/hash-password.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": { "nodemailer": "^6.9.16" }
+}

@@ -1,0 +1,3 @@
+Without SMTP settings, they’re written to backend/data/outbox/ instead of being sent. Fill in the SMTP settings in .env, then press “Kirim email tes” in the Pengaturan tab.
+
+To run it. You need Node.js 18 or newer. In backend, run npm install, copy .env.example to .env and set a password and a session secret, then run npm start. backend/README.md covers email setup and the two ways to host it.
