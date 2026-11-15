@@ -1,0 +1,33 @@
+:root{--bg:#060d1b;--card:#0b1629;--line:#1a2a47;--tx:#e8eefc;--mu:#8da2c6;--ac:#4f9bff;--bad:#ff7b7b;--ok:#6fcf97;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--tx);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif;padding:16px 16px 96px}
+.wrap{max-width:920px;margin:0 auto}
+h1{font-size:22px;letter-spacing:-.02em}
+h2{font-size:17px;margin:22px 0 8px}
+.top{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.sp{flex:1}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 6px}
+.btn{border:1px solid #243659;background:none;color:var(--tx);border-radius:10px;padding:9px 14px;font:inherit;font-weight:600;cursor:pointer}
+.btn:hover{border-color:var(--ac)}
+.btn.p{background:var(--ac);border-color:var(--ac);color:#04122b}
+.btn.on{background:#1a2f55;border-color:var(--ac)}
+.btn.sm{padding:5px 10px;font-size:13px}
+.btn.danger{color:var(--bad)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:12px 0}
+.head{display:flex;gap:8px;align-items:center;margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px}
+.wide{grid-column:1/-1}
+.f{display:grid;gap:4px;color:var(--mu);font-size:13px;margin-bottom:10px}
+input,textarea{width:100%;background:#08121f;border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--tx);font:inherit}
+input:focus,textarea:focus{outline:2px solid var(--ac);outline-offset:1px}
+input[type=checkbox]{width:auto}
+.chk{display:flex;gap:8px;align-items:center;color:var(--tx);margin:6px 0}
+.hint{color:var(--mu);font-size:13px;margin:4px 0 10px}
+.bar{position:fixed;left:0;right:0;bottom:0;background:#0b1629f2;border-top:1px solid var(--line);padding:12px 16px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap}
+.msg.ok{color:var(--ok)}
+.msg.err{color:var(--bad)}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mu);font-weight:500}
+.login{max-width:380px;margin:12vh auto 0}
+.login h1{margin-bottom:4px}
