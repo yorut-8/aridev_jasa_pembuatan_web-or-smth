@@ -1,3 +1,4 @@
+
 'use strict';
 const http = require('node:http');
 const fs = require('node:fs');
@@ -204,6 +205,20 @@ function createApp(overrides = {}) {
     const p = new URL(req.url, 'http://x').pathname, m = req.method;
     if (m === 'OPTIONS') { res.writeHead(204, { 'Access-Control-Allow-Origin': cfg.cors, 'Access-Control-Allow-Methods': 'GET,POST,PUT,OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type, Authorization', 'Access-Control-Max-Age': '600' }); return res.end(); }
     const d = store.get();
+
+    // Homepage route: backend status
+    if (p === '/' && m === 'GET') {
+      return json(res, 200, {
+        status: 'OK',
+        message: 'ARIDEV Backend is running',
+        endpoints: {
+          health: '/api/health',
+          packages: '/api/packages',
+          admin: '/admin/'
+        }
+      });
+    }
+
     if (p === '/api/health') return json(res, 200, { ok: true });
     if (p === '/api/packages' && m === 'GET') return json(res, 200, publicData(d));
     if (p === '/api/inquiries' && m === 'POST') {
